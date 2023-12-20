@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #earth {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: rotateEarth 5s linear infinite;
+  }
+
+  #sun {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    animation: rotateSun 10s linear infinite;
+  }
+  @keyframes rotateEarth {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotateSun {
+    0% {
+      transform: translateX(50px) rotate(0deg);
+    }
+    100% {
+      transform: translateX(50px) rotate(360deg);
+    }
+  }
